@@ -16,11 +16,13 @@ package net.agkn.hll;
  * limitations under the License.
  */
 
+import java.io.Serializable;
+
 /**
  * The types of algorithm/data structure that {@link HLL} can utilize. For more
  * information, see the Javadoc for {@link HLL}.
  */
-public enum HLLType {
+public enum HLLType implements Serializable {
     EMPTY,
     EXPLICIT,
     SPARSE,
