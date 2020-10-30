@@ -18,6 +18,8 @@ package net.agkn.hll.util;
 
 import net.agkn.hll.serialization.IWordSerializer;
 
+import java.io.Serializable;
+
 /**
  * A vector (array) of bits that is accessed in units ("registers") of <code>width</code>
  * bits which are stored as 64bit "words" (<code>long</code>s).  In this context
@@ -25,7 +27,7 @@ import net.agkn.hll.serialization.IWordSerializer;
  *
  * @author rgrzywinski
  */
-public class BitVector implements Cloneable {
+public class BitVector implements Cloneable, Serializable {
     // NOTE:  in this context, a word is 64bits
 
     // rather than doing division to determine how a bit index fits into 64bit
@@ -40,6 +42,7 @@ public class BitVector implements Cloneable {
 
     // ========================================================================
     public static final int BYTES_PER_WORD = 8/*8 bytes in a long*/;
+    private static final long serialVersionUID = -2191980917150692709L;
 
     // ************************************************************************
     // 64bit words
